@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../Assets/Pictures/balay_gulay.png">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg">
+        <source src="../../Assets/Background/backG.mp4">
+    </video>
+
+    <nav>
+        <ul>
+            <li><a href="../../Project.html"><img src="../../Assets/Icon/back.png" alt="Back"></a></li>
+        </ul>
+    </nav>
+
+    <form id="orderForm">
+        <h2>Balay Gulay</h2>
+
+        <label for="name">Customer/Restaurant Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="delivery">Delivery Date:</label>
+        <input type="date" id="delivery" name="delivery" required>
+        <div id="dateError" class="error"></div>
+
+        <h3>Order Items</h3>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>Vegetable</th>
+                    <th>Quantity</th>
+                    <th>Measure</th>
+                    <th>Remarks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="item_name[]" required></td>
+                    <td><input type="number" name="quantity[]" min="1" required></td>
+                    <td><input type="text" name="measure[]" required></td>
+                    <td><input type="text" name="remarks[]"></td>
+                    <td><button type="button" class="remove-row" onclick="removeRow(this)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" class="add-row" onclick="addRow()">Add Row</button><br><br>
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script>
+        function addRow() {
+            const table = document.getElementById("orderTable").getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            newRow.classList.add("table-row-new"); // Add animation class
+
+            newRow.insertCell(0).innerHTML = '<input type="text" name="item_name[]" required>';
+            newRow.insertCell(1).innerHTML = '<input type="number" name="quantity[]" min="1" required>';
+            newRow.insertCell(2).innerHTML = '<input type="text" name="measure[]" required>';
+            newRow.insertCell(3).innerHTML = '<input type="text" name="remarks[]">';
+            newRow.insertCell(4).innerHTML = '<button type="button" class="remove-row" onclick="removeRow(this)">Remove</button>';
+        }
+
+        function removeRow(button) {
+            const row = button.parentNode.parentNode;
+            const tbody = row.parentNode;
+            if(tbody.rows.length > 1) { // Keep at least one row
+                tbody.removeChild(row);
+            } else {
+                alert("You must have at least one item in the order.");
+            }
+        }
+
+        // Prevent page reload and validate date
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // stop reload
+            const deliveryDate = document.getElementById("delivery").value;
+            const dateError = document.getElementById("dateError");
+            
+            if (deliveryDate) {
+                const selectedDate = new Date(deliveryDate);
+                if (selectedDate.getDay() === 0) { // Sunday
+                    dateError.textContent = "Delivery date cannot be on a Sunday.";
+                    return;
+                } else {
+                    dateError.textContent = "";
+                }
+            }
+
+            // You can process the data here, e.g., show alert
+            alert("Order submitted successfully!");
+        });
+    </script>
+
+</body>
+</html>

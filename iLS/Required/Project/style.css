@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+  font-family: remonade;
+  src: url(../../Assets/Font/Remonade.woff);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    padding-top: 90px;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 89, 53, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 0 30px;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 30px;
+    top: 12px;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+}
+
+.main-title {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 170px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: remonade;
+    color: white;
+}
+
+.get-started h3 {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.get-started h3,
+.order-form p {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #2b5935;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.get-started h3:hover,
+.order-form p:hover {
+    background-color: #2b5935;
+    transform: scale(1.05);
+}
+
+.about,
+.history,
+.order {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.01);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.about p,
+.history p,
+.order p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.order-form {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.order-form p {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-form img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -3px;
+}
+
+footer {
+    width: 143%;
+    height: 70px;
+    padding: 10px 30px;
+    background-color: rgba(43, 89, 53, 0.75);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    z-index: 10;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    margin-left: -230px;
+    position: relative;
+    left: 0;
+}
+
+footer .footer-content p {
+    margin: 0 0 10px 0;
+}
+
+footer .socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+footer .socials li a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .socials li a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160vh;
+    background: url('../../Assets/Background/bGround.jpg') center/cover no-repeat;
+    z-index: -1;
+    filter: brightness(0.7);
+    transform: translateY(0);
+}
+
+#bg {
+    filter: brightness(0.7);
+}
+
+section, .about, .history, .order, .order-form {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+#people-behind {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.01);
+    text-align: center;
+}
+
+#people-behind h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.people-grid img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.people-grid img:hover {
+    transform: scale(1.1);
+}
