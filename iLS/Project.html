@@ -3,92 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balay Gulay</title>
+    <title>Balay Gulay | Home</title>
     <link rel="stylesheet" href="Required/Project/style.css">
     <link rel="icon" href="Assets/Pictures/balay_gulay.png">
 </head>
 <body>
-    <div id="bg"></div>
-
-    <main>
-        <!--Navigation-->
-        <nav>
-            <ul>
-                <li>
-                    <a href="" class="nav-logo">
-                        <img src="Assets/Icon/menu.png" alt="Menu">
-                    </a>
-                </li>
-                <li>
-                    <h1 id="project-title">Balay Gulay</h1>
-                </li>
-            </ul>
-        </nav>
-
-        <div id="people-behind" class="hidden">
-            <h2>People Behind the Project</h2>
-            <div class="people-grid">
-                <img src="Assets/Icon/Members/antonio.jpg" alt="Person 1">
-                <img src="Assets/Icon/Members/ballena.jpg" alt="Person 2">
-                <img src="Assets/Icon/Members/bello.png" alt="Person 3">
-                <img src="Assets/Icon/Members/borje.jpg" alt="Person 4">
-                <img src="Assets/Icon/Members/de_guzman.jpg" alt="Person 5">
-                <img src="Assets/Icon/Members/de_leon.jpg" alt="Person 6">
-                <img src="Assets/Icon/Members/gabrang.jpg" alt="Person 7">
-                <img src="Assets/Icon/Members/iradiel.png" alt="Person 8">
-                <img src="Assets/Icon/Members/lumagui.jpg" alt="Person 9">
-                <img src="Assets/Icon/Members/marquez.jpg" alt="Person 10">
-                <img src="Assets/Icon/Members/rosalada.jpg" alt="Person 11">
-                <img src="Assets/Icon/Members/sison.jpg" alt="Person 12">
-            </div>
-        </div>
-
-        <!--Title Screen Section-->
-        <div class="main-title">
-            <div class="title reveal">
-                <h1>Balay Gulay</h1>
-            </div>
-            <div class="get-started">
-                <h3>Get Started</h3>
-            </div>
-        </div>
-
-        <!--About Section-->
-        <div class="about reveal" id="about">
-            <h2>About Balay Gulay</h2>
-            <br>
-            <p>Balay Gulay, whose name comes from the Ilocano word "Balay" meaning house, is a humble family-run vegetable store driven by entrepreneurial passion and dreams. This small but dedicated supplier focuses on promoting healthy living by offering fresh and accessible varieties of vegetables to the community. Located in Village East, Cainta Rizal, the store serves local residents with quality produce. The family behind Balay Gulay remains committed to their mission of making nutritious food options available to everyone. As they continue to grow and prosper, they maintain their core values of freshness, accessibility, and community service.</p>
-        </div>
-
-        <!--History Section-->
-        <div class="history reveal">
-            <p>Balay Gulay started in 2015 as a small scale walk in vegetable store exclusive to the residents of Village East. Its humble beginnings focused on providing fresh, locally sourced produce to nearby houses. As months went by, Balay Gulay gradually expanded its reach by offering delivery services outside the village, allowing more customers to enjoy its fresh vegetables.</p>
-            <br>
-            <p>However, during the pandemic, the walk-in store was forced to close due to health and safety restrictions. Despite the challenges, Balay Gulay continued its operations through delivery services, ensuring that customers still had access to fresh and healthy vegetables during those difficult times.</p>
-            <br>
-            <p>In 2022, Balay Gulay made a comeback by reopening its walk-in store, marking a new chapter of growth and community connection. Unfortunately, due to unforeseen issues and challenges, the store had to permanently close its physical location. Since then, Balay Gulay has fully shifted to a delivery based business model, catering to individual clients and supplying vegetables to various companies and restaurants such as Hapag, Blake’s, Big Mama, and more.</p>
-            <br>
-            <p>Today, Balay Gulay continues to thrive as a trusted supplier of fresh produce, staying true to its mission of delivering quality and sustainability straight to its customers’ doors.</p>
-        </div>
-
-        <!--Order Section-->
-        <div class="order reveal">
-            <p>Balay Gulay offers a variety of not only vegetables but also fruits and is distributed to those who wants and orders. Prices vary depending on the value in the market but ensuring it is cheap and fresh everytime and everyday. Don't miss out on fresh fruits and veggies, order now and enjoy the freshness of each healthy dished you prepare using fruits and vegetables. We are open and ready to serve freshness Monday to Saturday.</p>
-        </div>
-        <div class="order-form reveal">
-            <a href="Required/Order Form/Order.html"><p><img src="Assets/Icon/shop.png" alt="Shop">Order Now</p></a>
-        </div>
-
-        <!--Footer-->
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2025 Balay Gulay. All rights reserved.</p>
-                <ul class="socials">
-                    <li><a href="#"><img src="Assets/Icon/fb.png" alt="Facebook"></a></li>
+    <header class="navbar">
+        <div class="logo">Balay Gulay</div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home" class="active" data-text="Home"><span class="icon">🏠</span><span class="text">Home</span></a></li>
+                    <li><a href="#about" data-text="About"><span class="icon">ℹ️</span><span class="text">About</span></a></li>
+                    <li><a href="#history" data-text="History"><span class="icon">📜</span><span class="text">History</span></a></li>
+                    <li><a href="#services" data-text="Services"><span class="icon">💼</span><span class="text">Services</span></a></li>
+                    <li><a href="#contacts" data-text="Contact"><span class="icon">✉️</span><span class="text">Contact</span></a></li>
                 </ul>
+            </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-box animate-on-scroll" data-animation="fadeIn">
+            <h1>Welcome to Balay Gulay</h1>
+            <p>We contribute to the nation's effort to realize a healthier and more abundant supply of food to feed a rapidly growing population through modern technologies employing healthier options.</p>
+            <a href="#services" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text animate-on-scroll" data-animation="slideInLeft">
+                <h2>About Us</h2>
+                <p>Balay Gulay, whose name comes from the Ilocano word "Balay" meaning house. This small but dedicated supplier focuses on promoting healthy living by offering fresh and accessible varieties of vegetables to the community.</p>
+                <p>The family behind Balay Gulay remains committed to their mission of making nutritious food options available to everyone. As they continue to grow and prosper, they maintain their core values of freshness, accessibility, and community service.</p>
             </div>
-        </footer>
-    </main>
+            <div class="about-image animate-on-scroll" data-animation="slideInRight">
+                <img src="Assets/Pictures/bGulay.jpg" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="history">
+        <div class="history-container">
+            <div class="history-left animate-on-scroll" data-animation="slideInLeft">
+                <h2 class="history-title">History</h2>
+                <p>Balay Gulay started in 2015 as a small scale walk in vegetable store exclusive to the residents of Village East. Its humble beginnings focused on providing fresh, locally sourced produce to nearby houses. As months went by, Balay Gulay gradually expanded its reach by offering delivery services outside the village, allowing more customers to enjoy its fresh vegetables.</p>
+                <p>However, during the pandemic, the walk-in store was forced to close due to health and safety restrictions. Despite the challenges, Balay Gulay continued its operations through delivery services, ensuring that customers still had access to fresh and healthy vegetables during those difficult times.</p>
+                <img src="Assets/Pictures/bGulay2.jpg" alt="Picture 1" class="history-image-left">
+            </div>
+            <div class="history-right animate-on-scroll" data-animation="slideInRight">
+                <p>In 2022, Balay Gulay made a comeback by reopening its walk-in store, marking a new chapter of growth and community connection. Unfortunately, due to unforeseen issues and challenges, the store had to permanently close its physical location. Since then, Balay Gulay has fully shifted to a delivery based business model, catering to individual clients and supplying vegetables to various companies and restaurants such as Hapag, Blake’s, Big Mama, and more.</p>
+                <img src="Assets/Pictures/bGulay3.jpg" alt="Picture 2" class="history-image-right">
+                <p>Today, Balay Gulay continues to thrive as a trusted supplier of fresh produce, staying true to its mission of delivering quality and sustainability straight to its customers’ doors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="services-left animate-on-scroll" data-animation="slideInLeft">
+                <h2>Service</h2>
+                <p>We offer a variety of fresh fruits, vegetables, and also plant-based food whatever you like, we ensure products are delivered safetly from our store to your doorstep.</p>
+            </div>
+            <div class="services-right animate-on-scroll" data-animation="slideInRight">
+                <h2>Order Now</h2>
+                <p>Ready to experience freshness of foods? Place your order easily and quickly through our order form. We’ll handle the rest!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="services-carousel">
+        <h2 class="carousel-title">Featured Fruits & Vegetables</h2>
+        <div class="carousel">
+            <img src="Assets/Pictures/kale.jpg" alt="Fruit 1">
+            <img src="Assets/Pictures/labuyo.jpg" alt="Fruit 2">
+            <img src="Assets/Pictures/sitaw.jpg" alt="Fruit 3">
+            <img src="Assets/Pictures/tomato.jpg" alt="Fruit 4">
+            <img src="Assets/Pictures/spinach.jpg" alt="Fruit 5">
+            <img src="Assets/Pictures/strawberry.jpg" alt="Fruit 6">
+            <img src="Assets/Pictures/okra.jpg" alt="Fruit 7">
+            <img src="Assets/Pictures/eggplant.jpg" alt="Fruit 8">
+            <img src="Assets/Pictures/greenIce.jpg" alt="Fruit 9">
+            <img src="Assets/Pictures/sigang.jpg" alt="Fruit 0">
+        </div>
+    </div>
+
+    <div class="services-form-btn">
+        <button id="openForm">Order Now</button>
+    </div>
+
+    <div id="orderFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Place Your Order</h2>
+            <div class="form-container">
+                <div class="form-left">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+
+                    <label for="contact">Contact</label>
+                    <input type="tel" id="contact" placeholder="Phone Number" required>
+
+                    <label for="deliveryDate">Delivery Date</label>
+                    <input type="date" id="deliveryDate" required>
+                </div>
+
+                <div class="form-right">
+                    <table id="orderTable">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Remarks</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" placeholder="Product Name"></td>
+                                <td><input type="number" placeholder="Quantity"></td>
+                                <td><input type="text" placeholder="Remarks"></td>
+                                <td><button class="deleteRow">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="addRow">Add Row</button>
+                </div>
+            </div>
+
+            <button type="submit">Submit Order</button>
+        </div>
+    </div>
+
+    <section id="contacts" class="contact-section">
+        <div class="contact-left animate-on-scroll" data-animation="slideInLeft">
+            <h2>Contact Us</h2>
+            <p>
+                Got a question, suggestion or just want to message us? Don't hesistate send us a message and kindly wait for our reply.
+            </p>
+        </div>
+
+        <div class="contact-right animate-on-scroll" data-animation="slideInRight">
+            <form id="contactForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Contact Number" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-center">
+            <p>&copy; 2025 Balay Gulay. All rights reserved.</p>
+            <a href="https://www.facebook.com/balaygulay" class="fb-link">Facebook</a>
+        </div>
+
+        <button class="meet-crew-btn" onclick="toggleCrew()">Meet the Crew</button>
+
+        <div id="crew-popup" class="crew-popup">
+            <div class="crew-grid">
+                <div class="crew-item"><img src="Assets/Icon/Members/antonio.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/ballena.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/bello.png"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/borje.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/de_guzman.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/de_leon.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/gabrang.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/iradiel.png"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/lumagui.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/marquez.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/rosalada.jpg"></div>
+                <div class="crew-item"><img src="Assets/Icon/Members/sison.jpg"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.getElementById("navbar");
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".navbar a");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("sidebar");
+                } else {
+                    navbar.classList.remove("sidebar");
+                }
+            });
+
+            function setActiveLink() {
+                let currentSection = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80;
+                    if (scrollY >= sectionTop) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + currentSection) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", setActiveLink);
+        });
+
+        const fullCarousel = document.querySelector(".services-carousel .carousel");
+        const images = fullCarousel.innerHTML;
+        fullCarousel.innerHTML += images;
+    </script>
 
     <script src="Required/Project/script.js"></script>
 </body>
